@@ -1,17 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="650.0" prefWidth="850.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poker.app.view.RootLayoutController">
+<BorderPane prefHeight="650.0" prefWidth="850.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="poker.app.view.RootLayoutController">
    <top>
       <MenuBar fx:id="mb" prefHeight="0.0" prefWidth="1064.0">
         <menus>
           <Menu mnemonicParsing="false" text="Help">
             <items>
-              <MenuItem mnemonicParsing="false" text="About" />
+              <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About" />
+                  <Menu mnemonicParsing="false" text="Rules">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#getRuleName" text="Five Stud" />
+                        <MenuItem mnemonicParsing="false" onAction="#getRuleName" text="Five Stud One Joker" />
+                        <MenuItem mnemonicParsing="false" onAction="#getRuleName" text="Five Stud Two Jokers" />
+                        <MenuItem mnemonicParsing="false" onAction="#getRuleName" text="Texas HoldEm" />
+                        <MenuItem mnemonicParsing="false" onAction="#getRuleName" text="Omaha" />
+                        <MenuItem mnemonicParsing="false" onAction="#getRuleName" text="Deuces Wild" />
+                        <MenuItem mnemonicParsing="false" onAction="#getRuleName" text="Aces and Eights" />
+                        <MenuItem mnemonicParsing="false" onAction="#getRuleName" text="Seven Draw" />
+                        <MenuItem mnemonicParsing="false" onAction="#getRuleName" text="Super Omaha" />
+                    </items>
+                  </Menu>
             </items>
           </Menu>
         </menus>
